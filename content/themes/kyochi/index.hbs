@@ -1,0 +1,18 @@
+{{! Kyochi v1.4, Copyright 2014, Cloud Eight, http://www.cloud-eight.com }}
+
+
+{{! Pull default.hbs markup - DO NOT REMOVE }}
+	{{!< default}}
+
+
+{{! Entry Feed }}
+	<main id="template-index" class="clearfix" role="main">
+
+		{{! Post Loop - partials/post-loop.hbs }}
+			{{> "post-loop"}}
+
+
+		{{!! Pagination - partials/pagination.hbs }}
+			{{pagination}}
+
+	</main>

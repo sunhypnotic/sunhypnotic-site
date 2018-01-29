@@ -1,0 +1,13 @@
+{{! Kyochi v1.4, Copyright 2014, Cloud Eight, http://www.cloud-eight.com }}
+
+
+{{! Pagination }}
+	<nav class="pagination-container" role="pagination">
+		<div class="container tm-larger bm-larger text-center clearfix">
+			<div class="pagination animate-in" data-anim-type="fade-in">
+				{{#if prev}}<a class="newer-posts" href="{{page_url prev}}">Newer Posts</a>{{/if}}
+				<span class="page-number">Page {{page}} of {{pages}}</span>
+				{{#if next}}<a class="older-posts" href="{{page_url next}}">Older Posts</a>{{/if}}
+			</div>
+		</div>
+	</nav>

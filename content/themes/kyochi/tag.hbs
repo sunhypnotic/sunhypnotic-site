@@ -1,0 +1,26 @@
+{{! Kyochi v1.4, Copyright 2014, Cloud Eight, http://www.cloud-eight.com }}
+
+
+{{! Pull default.hbs markup - DO NOT REMOVE }}
+	{{!< default}}
+
+
+{{! Entry Feed - Tag Filter }}
+	<main id="template-index" class="clearfix" role="main">
+
+		{{! Tag }}
+			<div class="container bm-remove">
+				<h1 class="bm-larger tm-larger">Filter by tag: <em>"{{tag.name}}"</em></h1>
+			</div>
+
+			<hr class="bm-remove separator" />
+
+
+		{{! Post Loop - partials/post-loop.hbs }}
+			{{> "post-loop"}}
+
+
+		{{!! Pagination - partials/pagination.hbs }}
+			{{pagination}}
+
+	</main>

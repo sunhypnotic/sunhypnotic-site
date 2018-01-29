@@ -1,0 +1,45 @@
+{{! Kyochi v1.4, Copyright 2014, Cloud Eight, http://www.cloud-eight.com }}
+
+
+{{! Pull default.hbs markup - DO NOT REMOVE }}
+	{{!< default}}
+
+
+{{! Page }}
+	<main id="template-page" class="clearfix" role="main" itemscope itemtype="http://schema.org/Article">
+		{{#post}}
+
+			{{! Post }}
+				<article class="{{#if @odd}} odd{{else}} even{{/if}}{{#if @first}} first{{/if}}{{#if @last}} last{{/if}}">
+					<div class="container bm-larger tm-larger animate-in" data-anim-type="fade-in" data-anim-delay="200">
+						<div class="one-whole bm-remove {{post_class}}">
+
+							{{! Page Info }}
+								<h1><a href="{{url}}" target="_self">{{{title}}}</a></h1>
+
+								<hr />
+						
+
+							{{! Page Body }}
+								<div class="article-body" itemprop="articleBody">{{content}}</div>
+
+						</div>
+
+						<div class="under-content">
+							<div></div>
+						</div>
+					</div>
+				</article>
+
+				<hr class="bm-remove separator" />
+
+
+			{{!! Pagination }}
+				<div class="container bm-larger tm-larger pagination-container animate-in" data-anim-type="fade-in">
+					<div class="one-whole bm-remove">
+						<a href="javascript:history.go(-1)" target="_self" class="button text-uppercase">Return To Previous Page</a>
+					</div>
+				</div>
+
+		{{/post}}
+	</main>

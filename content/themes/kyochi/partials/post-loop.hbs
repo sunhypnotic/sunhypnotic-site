@@ -1,0 +1,34 @@
+{{! Kyochi v1.4, Copyright 2014, Cloud Eight, http://www.cloud-eight.com }}
+
+
+{{! Post Loop }}
+	{{#foreach posts}}
+		<article class="{{#if @odd}} odd{{else}} even{{/if}}{{#if @first}} first{{/if}}{{#if @last}} last{{/if}}">
+			<div class="container bm-larger tm-larger animate-in" data-anim-type="fade-in" data-anim-delay="200">
+				<div class="one-whole bm-remove {{post_class}}">
+					<div class="featured-jewel cursor-pointer tip-t-fade animate-in" data-tooltip="Featured" data-anim-type="bounce-in" data-anim-delay="200"><i class="fa fa-heart"></i></div>
+
+					<div class="one-half-percent desktop-tablet bm-remove omega">
+						<div class="bm-remove featured-preview"><a href="{{url}}" target="_self" class="block">{{content words="0"}}</a></div>
+					</div>
+
+					<div class="one-half-percent desktop-tablet bm-remove alpha last">
+						<h1 class="bm-small"><a href="{{url}}" target="_self">{{{title}}}</a></h1>
+						<h6><time datetime="{{date format='DD-MM-YYYY'}}">{{date format="DD MMM YYYY"}}</time></h6>
+
+						<div class="article-body">
+							<p>{{excerpt words="30"}}&hellip;</p>
+						</div>
+
+						<div class="text-right"><a href="{{url}}" target="_self" class="button w-large bm-remove text-uppercase">Continue Reading</a></div>
+					</div>
+				</div>
+
+				<div class="under-content">
+					<div></div>
+				</div>
+			</div>
+		</article>
+
+		<hr class="bm-remove separator" />
+	{{/foreach}}

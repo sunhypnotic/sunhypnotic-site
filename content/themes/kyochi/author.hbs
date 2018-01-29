@@ -1,0 +1,49 @@
+{{! Kyochi v1.4, Copyright 2014, Cloud Eight, http://www.cloud-eight.com }}
+
+
+{{! Pull default.hbs markup - DO NOT REMOVE }}
+	{{!< default}}
+
+
+{{! Author }}
+	<main id="template-author" class="clearfix" role="main">
+
+		{{! Bio }}
+			{{#if author}}
+				{{#author}}
+					<div class="container bm-larger tm-larger author animate-in" itemprop="author" itemscope itemtype="http://schema.org/Person" data-anim-type="fade-in" data-anim-delay="200">
+						<div class="one-whole bm-remove author-bio">
+							<h1>{{name}}</h1>
+
+							<hr />
+
+							{{#if image}}<a href="{{url}}" target="_self" class="author-image"><img src="{{image}}" alt="{{name}} Image" /></a>{{/if}}
+
+							<div class="author-details">
+								<p class="bm-small">
+									{{#if location}}<i class="fa fa-map-marker fa-fw"></i> &nbsp;<a href="https://maps.google.com/maps?q={{location}}" target="_blank">{{location}}</a> &nbsp;&nbsp;{{/if}}<br class="split-br" />
+									{{#if website}}<i class="fa fa-laptop fa-fw"></i> &nbsp;<a href="{{website}}" target="_blank">Website</a>{{/if}}
+								</p>
+
+								<p class="bm-remove">{{bio}}</p>
+							</div>
+						</div>
+
+						<div class="under-content">
+							<div></div>
+						</div>
+					</div>
+				{{/author}}
+			{{/if}}
+
+			<hr class="bm-remove separator" />
+
+
+		{{! Post Loop - partials/post-loop.hbs }}
+			{{> "post-loop"}}
+
+
+		{{!! Pagination - partials/pagination.hbs }}
+			{{pagination}}
+
+	</main>
